@@ -1,0 +1,32 @@
+
+{
+  "name": "Mousa",
+  "email": "Mousa_",
+  "titleMale": "Mr",
+  "titleFemale": "Mrs",
+  "password": "P@ssw0rd",
+  "day": "1",
+  "month": "January",
+  "year": "1997",
+  "firstName": "Ali_Firstname",
+  "lastName": "Ali_Lastname",
+  "companyName": "Aut_Company",
+  "address1": "Auto_Address1",
+  "address2": "Auto_Address2",
+  "country": "Canada",
+  "state": "Auto_State",
+  "city": "Auto_City",
+  "zipcode": "12388",
+  "mobileNumber": "1234500090",
+  "product" :
+  {
+    "name": "Men Tshirt",
+    "price": "Rs. 400",
+    "quantity": "1",
+    "total": "Rs. 400"
+  },
+  "messages" :
+  {
+    "productAdded": "Your product has been added to cart."
+  }
+}

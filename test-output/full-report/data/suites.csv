@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Verify User Can Login Successfully","15866","LoginTC","Default Suite","Sun Aug 31 17:51:41 AST 2025","passed","Sun Aug 31 17:51:57 AST 2025","com.automationExercise.tests.loginTests.LoginTest","Automation_Excercise","com.automationExercise.tests.loginTests.LoginTest","LoginTC"

@@ -1,0 +1,25 @@
+
+{
+  "name": "Auto_Test",
+  "email": "testAuto_",
+  "titleMale": "Mr",
+  "titleFemale": "Mrs",
+  "password": "P@ssw0rd",
+  "day": "1",
+  "month": "January",
+  "year": "1997",
+  "firstName": "EMa_Firstname",
+  "lastName": "Ema_Lastname",
+  "companyName": "Aut_Company",
+  "address1": "Auto_Address1",
+  "address2": "Auto_Address2",
+  "country": "Canada",
+  "state": "Auto_State",
+  "city": "Auto_City",
+  "zipcode": "12388",
+  "mobileNumber": "1234500090",
+  "messages" :
+  {
+    "error": "Email Address already exist!"
+  }
+}

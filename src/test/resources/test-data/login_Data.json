@@ -1,0 +1,12 @@
+
+{
+  "name": "Auto_Tests",
+  "email": "testsAuto_",
+  "password": "Test@123",
+  "firstName": "EMa_Firstname",
+  "lastName": "Ema_Lastname",
+  "messages" :
+  {
+    "error": "Your email or password is incorrect!"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "productDetails": {
+    "productName": "Stylish Dress",
+    "productPrice": "Rs. 1500"
+  },
+  "reviews": {
+    "reviewName": "ali mohammed",
+    "reviewEmail": "ali@gmail.com",
+    "comment": "Great mouse, very responsive!"
+  },
+  "Messages": {
+    "reviewAdded": "Thank you for your review."
+  }
+}
