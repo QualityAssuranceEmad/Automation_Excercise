@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 
 @Feature("Ui CheckOut Tests")
 @Epic("Automation Exercise")
-@Owner("Emad Maher Abd ElHamied")
+@Owner("Emad Maher Abd El Hamied")
 @Story("CheckOut Tests")
 @UiTest
 public class CheckOutTest extends BaseTest {
