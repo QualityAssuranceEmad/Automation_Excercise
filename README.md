@@ -55,20 +55,7 @@ Welcome to the central hub of my Quality Assurance (QA) and Test Automation proj
 
 This repository contains the following projects:  
 
-1. **selenium-testng-pom-Automation_Excercise** – A full-fledged Test Automation Framework built with Java, TestNG, Selenium, Page Object Model, and more.  
-2. **restassured-api-testing** – API automation testing framework using RestAssured and TestNG.  
-3. **playwright-java-pom** – End-to-end UI automation using Playwright with Java, applying Page Object Model.  
-4. **jmeter-performance-testing** – Sample performance testing scripts and configurations using Apache JMeter.  
-
----
-
-## 🔍 Project: selenium-testng-pom-Automation_Excercise  
-
-A robust, maintainable, and scalable Test Automation Framework (**Automation_Excercise**) built with industry best practices. This framework is ideal for testing web applications using Selenium WebDriver, with features like data-driven testing, Allure reporting, parallel execution, and CI integration.  
-
----
-
-### 🧱 Project Structure  
+### 🧱 Project Structure
 TAF/
 ├── .gitignore
 ├── pom.xml
@@ -173,7 +160,11 @@ TAF/
 │           ├── products-data.json
 │           └── register-data.json
 
-mvn test `
+
+ ## Run the tests
+ ``
+ mvn test 
+ ``
 ## 👨‍💻 Author ### Emad Maher
 #### mid-level Test Automation Engineer 
 | 📧 emad.maher.tester@gmail.com
