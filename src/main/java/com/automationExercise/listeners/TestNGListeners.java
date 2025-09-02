@@ -68,7 +68,7 @@ public class TestNGListeners implements ISuiteListener, IExecutionListener, IInv
         if (method.isTestMethod()) {
 
             {
-                if (testResult.getInstance()instanceof UiTest)
+                if (testResult.getInstance().getClass().isAnnotationPresent(UiTest.class) )
                 {
                     ScreenRecordManager.stopRecording(testResult.getName());
                     if (testResult.getInstance() instanceof WebDriverProvider provider) {
