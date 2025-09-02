@@ -1,5 +1,15 @@
 # 🚀 Automation Exercise – Test Automation Framework  
 
+![Java](https://img.shields.io/badge/Java-17%2F21-orange?logo=java&logoColor=white)  
+![Selenium](https://img.shields.io/badge/Selenium-WebDriver-brightgreen?logo=selenium&logoColor=white)  
+![TestNG](https://img.shields.io/badge/TestNG-Framework-blueviolet)  
+![REST Assured](https://img.shields.io/badge/REST%20Assured-API%20Testing-yellowgreen)  
+![Maven](https://img.shields.io/badge/Maven-Build%20Tool-red?logo=apachemaven)  
+![Allure](https://img.shields.io/badge/Allure-Reports-ff69b4)  
+![Docker](https://img.shields.io/badge/Docker-Optional-blue?logo=docker)  
+
+---
+
 I’m excited to share that I have successfully built a complete **Test Automation Framework** for the [Automation Exercise website](https://automationexercise.com) 🎉  
 
 ---
