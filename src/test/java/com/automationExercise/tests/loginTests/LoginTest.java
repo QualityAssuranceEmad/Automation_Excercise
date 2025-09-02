@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 @Owner("Emad Maher Abd ElHamied")
 @Story("Login Tests")
 
-//@Severity(SeverityLevel.BLOCKER)
+//@Severity(SeverityLevel.BLOCKE)
 public class LoginTest extends BaseTest {
 
     String timestamp = TimeManager.getSimpleTimestamp();
