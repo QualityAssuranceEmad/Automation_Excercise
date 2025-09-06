@@ -1,5 +1,4 @@
-package com.automationExercise.tests.loginTests;
-
+package com.automationExercise.tests.apiTests;
 import com.automationExercise.apis.UserManagementAPI;
 import com.automationExercise.drivers.GuiDrivers;
 import com.automationExercise.drivers.UiTest;
@@ -13,16 +12,18 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-@Feature("Ui Login Invalid Email Tests")
+@Feature("Ui Login Tests")
 @Epic("Automation Exercise")
 @Owner("Emad Maher Abd ElHamied")
 @Story("Login Tests")
-public class LoginWrongEmail extends BaseTest {
+
+//@Severity(SeverityLevel.BLOCKE)
+public class LoginTest extends BaseTest {
 
     String timestamp = TimeManager.getSimpleTimestamp();
 
     //Test
-    @Description("Verify User Can't Login Successfully With Wrong Email")
+    @Description("Verify User Can Login Successfully")
     @Test
     public void LoginTC() {
         new UserManagementAPI().createRegisterUserAccount(
@@ -34,15 +35,15 @@ public class LoginWrongEmail extends BaseTest {
 
                 .verifyUserCreatedSuccessfully();
         new SignupLoginPage(driver).navigate()
-                .enterLoginEmail(testData.getJsonData("email") + "@gmail.com")
+                .enterLoginEmail(testData.getJsonData("email") + timestamp + "@gmail.com")
                 .enterLoginPassword(testData.getJsonData("password"))
                 .clickLoginButton()
-                .isLoginErrorVisible(testData.getJsonData("messages.error"));
+                .navigationBar
+                .verifyUserLoggedIn(testData.getJsonData("name"));
         new UserManagementAPI().deleteUserAccount(
                         testData.getJsonData("email") + timestamp + "@gmail.com",
                         testData.getJsonData("password"))
                 .verifyUserDeletedSuccessfully();
-
 
 
     }

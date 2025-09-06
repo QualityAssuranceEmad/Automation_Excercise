@@ -1,0 +1,11 @@
+
+{
+  "name": "Auto_Tests",
+  "email": "testsAuto@gmail.com",
+  "subject": "Test@123",
+  "message": "problem in my cart",
+  "messages" :
+  {
+    "successMessage": "Success! Your details have been submitted successfully."
+  }
+}

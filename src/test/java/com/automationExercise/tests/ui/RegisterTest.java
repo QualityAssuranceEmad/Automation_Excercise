@@ -1,4 +1,4 @@
-package com.automationExercise.tests.registrationTests;
+package com.automationExercise.tests.ui;
 
 import com.automationExercise.apis.UserManagementAPI;
 import com.automationExercise.drivers.GuiDrivers;

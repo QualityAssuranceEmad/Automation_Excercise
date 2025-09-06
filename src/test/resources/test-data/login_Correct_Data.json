@@ -1,0 +1,12 @@
+
+{
+  "name": "emad maher",
+  "email": "emadaboaliu@yahoo.com",
+  "wrongEmail": "emadaboaliu@yahoo",
+  "password": "bhN@6f5HdSiUyE",
+  "wrongPassword": "bhN@6f5HdjhgSiUyE",
+  "messages":
+  {
+    "error": "Your email or password is incorrect!"
+  }
+}
