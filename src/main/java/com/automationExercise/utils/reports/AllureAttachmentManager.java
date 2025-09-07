@@ -53,4 +53,20 @@ public class AllureAttachmentManager {
         }
     }
 
+    //this not add to the framework
+    public static void attachProductNames(String title, java.util.List<String> productNames) {
+        try {
+            StringBuilder sb = new StringBuilder();
+            sb.append("Total products: ").append(productNames.size()).append("\n\n");
+            for (String name : productNames) {
+                sb.append(name).append("\n");
+            }
+
+            Allure.addAttachment(title, "text/plain", sb.toString());
+        } catch (Exception e) {
+            LogsManager.error("Error attaching product names", e.getMessage());
+        }
+    }
+
+
 }

@@ -19,7 +19,11 @@ public class ProductDeatilsPage {
 
     //Locators
     private final By productNameLabel = By.cssSelector(".product-information > h2");
+    private final By categoryLabel = By.xpath("//div[@class='product-information']/p[contains(text(),'Category')]");
     private final By productPriceLabel = By.xpath("//div[@class='product-information']/span/span");
+    private final By productAvailabilityLabel = By.cssSelector(".product-information p:nth-of-type(2)");
+    private final By productConditionLabel = By.cssSelector(".product-information p:nth-of-type(3)");
+    private final By productDescriptionLabel = By.cssSelector(".product-information p:nth-of-type(4)");
     private final By reviewerName = By.id("name");
     private final By reviewEmail = By.id("email");
     private final By reviewTextArea = By.id("review");
@@ -60,6 +64,34 @@ public class ProductDeatilsPage {
         return this;
     }
 
+    @Step("validate products deatils are correct")
+    public ProductDeatilsPage validateProductDeatils(String name, String category, String price,
+                                                     String availability,String condition,String description) {
+        String actualProductName = driver.element().getText(productNameLabel);
+        LogsManager.info("Actual Name: " + actualProductName);
+        String actualProductCategory = driver.element().getText(categoryLabel);
+        String categoryValue = actualProductCategory.replace("Category: ", "").trim();
+        LogsManager.info("Actual Category: " + actualProductCategory);
+        String actualProductPrice = driver.element().getText(productPriceLabel);
+        LogsManager.info("Actual Price: " + actualProductPrice);
+        String actualProductAvailability = driver.element().getText(productAvailabilityLabel);
+        String availabilityValue = actualProductAvailability.replace("Availability: ", "").trim();
+        LogsManager.info("Actual Availability: " + actualProductAvailability);
+        String actualProductCondition = driver.element().getText(productConditionLabel);
+        String conditionValue = actualProductCondition.replace("Condition: ", "").trim();
+        LogsManager.info("Actual Condition: " + actualProductCondition);
+        String actualProductDescription = driver.element().getText(productDescriptionLabel);
+        String descriptionValue = actualProductDescription.replace("Description: ", "").trim();
+        LogsManager.info("Actual Description: " + actualProductDescription);
+        driver.validation().Equals(actualProductName, name, "Product Name Not Match");
+        driver.validation().Equals(categoryValue, category, "Product Category Not Match");
+        driver.validation().Equals(actualProductPrice, price, "Product Price Not Match");
+        driver.validation().Equals(availabilityValue, availability, "Product Availability Not Match");
+        driver.validation().Equals(conditionValue, condition, "Product Condition Not Match");
+        driver.validation().Equals(descriptionValue, description, "Product Description Not Match");
+        return this;
+    }
+
     @Step("Validate success message is visible: '{message}'")
     public ProductDeatilsPage isReviewSuccessMessageVisible(String message) {
         String actualMessage = driver.element().getText(reviewSuccessMessage);
@@ -67,4 +99,11 @@ public class ProductDeatilsPage {
         driver.verification().Equals(actualMessage, message, "Message Not Match");
         return this;
     }
+
+    @Step("Verify that Test Cases page is visible successfully")
+    public ProductDeatilsPage verifyProductsDetailsPageUrl() {
+        driver.verification().assertPageUrl(PropertyReader.getProperty("baseUrlWeb") + productDetails);
+        return this;
+    }
+
 }

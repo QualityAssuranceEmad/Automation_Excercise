@@ -8,8 +8,12 @@ import com.automationExercise.utils.dataReader.PropertyReader;
 import com.automationExercise.utils.logs.LogsManager;
 import com.automationExercise.validations.Validation;
 import com.automationExercise.validations.Verification;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ThreadGuard;
+
+import java.util.List;
 
 public class GuiDrivers {
     private final  String browser = PropertyReader.getProperty("browserType");
@@ -61,5 +65,10 @@ public ElementActions element() {
 
     public  void quitDriver() {
         driverThreadLocal.get().quit();
+    }
+
+
+    public List<WebElement> findElements(By by) {
+        return get().findElements(by);
     }
 }

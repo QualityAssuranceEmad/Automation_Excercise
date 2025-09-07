@@ -1,7 +1,12 @@
 {
   "productDetails": {
-    "productName": "Stylish Dress",
-    "productPrice": "Rs. 1500"
+    "productName": "Blue Top",
+    "productCategory": "Women > Tops",
+    "productPrice": "Rs. 500",
+    "productAvailability": "In Stock",
+    "productCondition": "New",
+    "productBrand": "Brand: Polo"
+
   },
   "reviews": {
     "reviewName": "ali mohammed",
