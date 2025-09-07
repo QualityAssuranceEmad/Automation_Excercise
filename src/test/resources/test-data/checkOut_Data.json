@@ -25,8 +25,25 @@
     "quantity": "1",
     "total": "Rs. 400"
   },
+  "payment" :
+  {
+    "nameOnCard": "Mousa",
+    "cardNumber": "1234567890123456",
+    "cvv": "123",
+    "expiryMonth": "12",
+    "expiryYear": "2036"
+
+  },
   "messages" :
   {
     "productAdded": "Your product has been added to cart."
+  },
+  "comment" :
+  {
+    "commentMessage": "Your product has been added to cart."
+  },
+  "PaymentMessages" :
+  {
+    "paymentSuccessMessage": "Congratulations! Your order has been confirmed!"
   }
 }

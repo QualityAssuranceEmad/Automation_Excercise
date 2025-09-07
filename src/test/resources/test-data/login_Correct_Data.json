@@ -1,12 +1,40 @@
 
 {
-  "name": "emad maher",
-  "email": "emadaboaliu@yahoo.com",
+  "name": "Emad",
+  "email": "maheremad681@gmail.com",
   "wrongEmail": "emadaboaliu@yahoo",
-  "password": "bhN@6f5HdSiUyE",
+  "password": "gXkN299wCz2H@r4",
   "wrongPassword": "bhN@6f5HdjhgSiUyE",
   "messages":
   {
     "error": "Your email or password is incorrect!"
+  },
+  "product" :
+  {
+    "name": "Men Tshirt",
+    "price": "Rs. 400",
+    "quantity": "1",
+    "total": "Rs. 400"
+  },
+  "payment" :
+  {
+    "nameOnCard": "Mousa",
+    "cardNumber": "1234567890123456",
+    "cvv": "123",
+    "expiryMonth": "12",
+    "expiryYear": "2036"
+
+  },
+  "messages" :
+  {
+    "productAdded": "Your product has been added to cart."
+  },
+  "comment" :
+  {
+    "commentMessage": "Your product has been added to cart."
+  },
+  "PaymentMessages" :
+  {
+    "paymentSuccessMessage": "Congratulations! Your order has been confirmed!"
   }
 }

@@ -8,14 +8,16 @@ import com.automationExercise.tests.BaseTest;
 import com.automationExercise.utils.TimeManager;
 import com.automationExercise.utils.dataReader.JsonReader;
 import io.qameta.allure.*;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 @Feature("Ui CheckOut Tests")
 @Epic("Automation Exercise")
 @Owner("Emad Maher Abd ElHemied")
 @Story("CheckOut Tests")
 @UiTest
-public class CheckOutTest extends BaseTest {
+public class RegisterThenCheckOutTest extends BaseTest {
     String timestamp = TimeManager.getSimpleTimestamp();
     //Tests
     @Description("adding product to cart and assert adding it in the cart page")

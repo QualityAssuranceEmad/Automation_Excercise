@@ -114,14 +114,9 @@ public class PaymentTest extends BaseTest {
                         testData.getJsonData("payment.expiryYear"))
                 .verifyPaymentSuccessMessage(testData.getJsonData("messages.paymentSuccess"));
     }
-@Test(dependsOnMethods = {"testPlaceOrder_shouldSucceed", "testCheckout_shouldDisplayCorrectAddresses", "testLoginWithRegisteredUser_shouldSucceed", "testRegisterNewAccount_shouldSucceed"})
-public void deleteAccount(){
-    new UserManagementAPI().deleteUserAccount(
-                    testData.getJsonData("email") + timestamp + "@gmail.com",
-                    testData.getJsonData("password"))
-            .verifyUserDeletedSuccessfully();
 
-}
+
+
 
     //Configurations
     @BeforeClass

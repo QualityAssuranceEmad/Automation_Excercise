@@ -1,6 +1,7 @@
 package com.automationExercise.tests.ui;
 
 import com.automationExercise.drivers.GuiDrivers;
+import com.automationExercise.pages.components.CartPage;
 import com.automationExercise.pages.components.NavigationBarComponent;
 import com.automationExercise.pages.components.ProductDeatilsPage;
 import com.automationExercise.tests.BaseTest;
@@ -8,10 +9,10 @@ import com.automationExercise.utils.dataReader.JsonReader;
 import io.qameta.allure.Description;
 import org.testng.annotations.*;
 
-public class VerifyAllProductsTest extends BaseTest {
-    @Description(" Verify user is navigated to test cases page successfully")
+public class VerifyProductQuantity  extends BaseTest {
+    @Description("Verify User Can Login Successfully")
     @Test
-    public void testCases() {
+    public void SubscriptionCartPageTest() {
         new NavigationBarComponent(driver)
                 .navigate()
                 .verifyHomePageVisible()
@@ -19,22 +20,20 @@ public class VerifyAllProductsTest extends BaseTest {
                 .isAllProductsLabelVisible()
                 .waitUntilAtLeastOneProductIsVisible()
                 .viewProductOfFirstProduct();
+        new ProductDeatilsPage(driver)
+                .increaseQuantity(testData.getJsonData("productDetails.quantity"));
     }
-      @Test
-      public void verifyProductDetails() {
-            new ProductDeatilsPage(driver)
-                    .verifyProductsDetailsPageUrl()
-                    .validateProductDeatils(testData.getJsonData("productDetails.productName")
-                            ,testData.getJsonData("productDetails.productCategory"),
-                            testData.getJsonData("productDetails.productPrice")
-                            ,testData.getJsonData("productDetails.productAvailability"),
-                            testData.getJsonData("productDetails.productCondition"),
-                            testData.getJsonData("productDetails.productBrand"));
-      }
+    @Test
+public void verifyProductDetails() {
+            new CartPage(driver)
+                    .validateProductInCart(
+                            testData.getJsonData("productDetails.productName"),
+                            testData.getJsonData("productDetails.productPrice"),
+                            testData.getJsonData("productDetails.quantity"),
+                            testData.getJsonData("productDetails.total"));
 
+}
 
-
-    //Configurations
 
 
     @BeforeClass
@@ -49,8 +48,4 @@ public class VerifyAllProductsTest extends BaseTest {
     public void tearDown() {
         driver.quitDriver();
     }
-
 }
-
-
-

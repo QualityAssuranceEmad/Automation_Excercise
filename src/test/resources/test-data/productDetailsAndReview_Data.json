@@ -5,7 +5,9 @@
     "productPrice": "Rs. 500",
     "productAvailability": "In Stock",
     "productCondition": "New",
-    "productBrand": "Brand: Polo"
+    "productBrand": "Brand: Polo",
+    "quantity": "4",
+    "total": "Rs. 2000"
 
   },
   "reviews": {

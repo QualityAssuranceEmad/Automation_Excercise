@@ -18,6 +18,9 @@ public class ProductDeatilsPage {
 
 
     //Locators
+    private final By addToCartButton = By.xpath("//button[@type='button']");
+    private final By viewCartButton = By.cssSelector(".modal-body a[href='/view_cart']");
+
     private final By productNameLabel = By.cssSelector(".product-information > h2");
     private final By categoryLabel = By.xpath("//div[@class='product-information']/p[contains(text(),'Category')]");
     private final By productPriceLabel = By.xpath("//div[@class='product-information']/span/span");
@@ -29,7 +32,7 @@ public class ProductDeatilsPage {
     private final By reviewTextArea = By.id("review");
     private final By submitReviewButton = By.id("button-review");
     private final By reviewSuccessMessage = By.xpath("//div[@class='alert-success alert']/span");
-
+    private final By increaseQuantityButton = By.id("quantity");
 
     //Actions
     @Step("navagate to Product Deatils Page")
@@ -49,6 +52,13 @@ public class ProductDeatilsPage {
     @Step("Submit Review")
     public ProductDeatilsPage clickOnSubmitReview() {
         driver.element().clicing(submitReviewButton);
+        return this;
+    }
+    @Step("Increase Quantity")
+    public ProductDeatilsPage increaseQuantity(String quantity) {
+        driver.element().typing(increaseQuantityButton, quantity)
+                .clicing(addToCartButton)
+                .clicing(viewCartButton);
         return this;
     }
 

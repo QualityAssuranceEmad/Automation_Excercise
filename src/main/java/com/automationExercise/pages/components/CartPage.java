@@ -15,6 +15,11 @@ public class CartPage {
     private String cartPageEndPoint = "/view_cart";
 
     //Locators
+    private final By subscriptionLabel = By.xpath("//h2[text()='Subscription']");
+    private final By emailField = By.id("susbscribe_email");
+    private final By subscribeButton = By.id("subscribe");
+    private final By subscriptionMessage = By.xpath("//div[@class='alert-success alert']");
+
     private final By proceedToCheckoutButton = By.xpath("//div[@class='col-sm-6']//a[contains(text(),'Proceed To Checkout')]");
     private final By emptyCartMessage = By.xpath("//*[@id=\"empty_cart\"]/p/b");
     //Dynamic Locator
@@ -51,8 +56,18 @@ public class CartPage {
         driver.element().clicing(removeProductButton(productName));
         return this;
     }
-
+    @Step("enter Email {email} in subscription field ")
+    public CartPage enterEmail(String email) {
+        driver.element().typing(emailField, email)
+                .clicing(subscribeButton);
+        return this;
+    }
     //Validations
+    @Step("Verify that cart page is displayed")
+    public CartPage isCartPageDisplayed() {
+        driver.verification().isElementVisible(proceedToCheckoutButton);
+        return this;
+    }
     @Step("validate product: '{productName}' with price: '{price}', quantity: '{quantity}' " +
             "and total price: '{totalPrice}' in cart")
     public CartPage validateProductInCart(String productName, String price, String quantity, String totalPrice) {
@@ -70,6 +85,17 @@ public class CartPage {
     public CartPage isEmptyCartMessageVisible(String message) {
         String actualMessage = driver.element().getText(emptyCartMessage);
         driver.validation().Equals(actualMessage, message, "Message Not Match");
+        return this;
+    }
+    @Step("validate subscription label is visible")
+    public CartPage isSubscriptionLabelVisible() {
+        driver.verification().isElementVisible(subscriptionLabel);
+        return this;
+    }
+    @Step("Verify subscription message {message} is visible")
+    public CartPage verifySubscriptionMessage(String message) {
+        String actualMessage = driver.element().getText(subscriptionMessage);
+        driver.verification().Equals(actualMessage, message, "Subscription message is not visible");
         return this;
     }
 }

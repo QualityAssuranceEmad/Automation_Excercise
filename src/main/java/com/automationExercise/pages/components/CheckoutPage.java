@@ -57,6 +57,16 @@ public class CheckoutPage {
         return new PaymentPage(driver);
     }
 
+    @Step("click on loginRegister button")
+    public CheckoutPage clickOnLoginRegisterButton() {
+        driver.element().clicing(registerLoginButton);
+        return this;
+    }
+    @Step("click on continue on cart button")
+    public CheckoutPage clickOnContinueOnCartButton() {
+        driver.element().clicing(continueOnCartButton);
+        return this;
+    }
     ///Validation
     @Step("validate Checkout page Your delivery address")
     public CartPage validateYourDeliveryAddress(String title,String fName,String lName, String company, String address1,
