@@ -51,11 +51,19 @@ I’m excited to share that I have successfully built a complete **Test Automati
 
 Welcome to the central hub of my Quality Assurance (QA) and Test Automation projects. This repository includes a set of structured and scalable frameworks that showcase real-world examples of modern testing practices using Java and various tools.  
 
-## 📁 Repository Structure  
+That's a great idea\! Including the repository structure in your README file is crucial for helping others understand and navigate your project. It shows clear organization and professionalism.
 
-This repository contains the following projects:  
+Here's how you can add that section to your README, formatted cleanly and ready to go.
 
-### 🧱 Project Structure
+-----
+
+### **📁 Repository Structure**
+
+This repository contains a single, comprehensive test automation framework for the `Automation_Excercise` website. Its structure is designed for scalability and maintainability, following best practices for a Maven-based project.
+
+#### **🧱 Project Structure**
+
+```
 TAF/
 ├── .gitignore
 ├── pom.xml
@@ -159,6 +167,7 @@ TAF/
 │           ├── product-details-data.json
 │           ├── products-data.json
 │           └── register-data.json
+```
 
 
  ## Run the tests
