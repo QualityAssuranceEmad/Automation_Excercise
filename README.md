@@ -174,7 +174,7 @@ TAF/
  ``
  mvn test 
  ``
-## 👨‍💻 Author ### Emad Maher
+## 👨‍💻 Author ## Emad Maher
 #### mid-level Test Automation Engineer 
 | 📧 emad.maher.tester@gmail.com
 🔗 LinkedIn: linkedin.com/in/emad-maher-5806b2254
